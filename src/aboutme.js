@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import './aboutme.css'; // <-- Import the AboutMe.css file here
 import Header from './header'; // <-- Import the header component here
 import Footer from './footer'; // <-- Import the footer component here
+import S3Content from './s3contentcomponent';
 // import roshiimage from './assets/roshit_kamehameha.jpeg';
  
 
@@ -59,20 +60,11 @@ function AboutMe() {
 
         {/* Bio Section */}
         <section className="aboutme-section">
-          {/* <h2 className="aboutme-section-title">Bio</h2> */}
-          <p className="aboutme-placeholder">&lt;Insert&gt;</p>
-        </section>
-
-        {/* Work Experience Section */}
-        <section className="aboutme-section">
-          {/* <h2 className="aboutme-section-title">Work Experience</h2> */}
-          <p className="aboutme-placeholder">&lt;Insert&gt;</p>
-        </section>
-
-        {/* Education Section */}
-        <section className="aboutme-section">
-          {/* <h2 className="aboutme-section-title">Education</h2> */}
-          <p className="aboutme-placeholder">&lt;Insert&gt;</p>
+          <S3Content
+            bucketName="nithin-seshadri-website"
+            fileName="bio.txt"
+            className="aboutme-placeholder"
+            />
         </section>
 
         {/* Bottom Links */}
