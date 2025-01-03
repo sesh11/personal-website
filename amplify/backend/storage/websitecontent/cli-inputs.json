@@ -1,0 +1,14 @@
+{
+  "resourceName": "websitecontent",
+  "policyUUID": "f0d3f723",
+  "bucketName": "amplify-personalwebsite-dev-6caf3-deployment",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

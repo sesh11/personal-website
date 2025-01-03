@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 import AboutMe from './aboutme';
 import Notebook from './notebook';
 import Article from './article';
@@ -22,5 +23,5 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
 
