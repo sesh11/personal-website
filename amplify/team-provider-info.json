@@ -17,6 +17,12 @@
       },
       "storage": {
         "websitecontent": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d283f60ushb2cl",
+          "type": "cicd"
+        }
       }
     }
   }
