@@ -51,7 +51,7 @@
 
 
 import React, { useState, useEffect } from 'react';
-import { Storage } from 'aws-amplify';
+import { Storage } from '@aws-amplify/storage';
 
 const S3Content = ({ bucketPath, className }) => {
     const [content, setContent] = useState('');
