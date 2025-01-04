@@ -51,7 +51,7 @@
 
 
 import React, { useState, useEffect } from 'react';
-import { Storage } from '@aws-amplify/storage';
+import { getUrl } from '@aws-amplify/storage';
 
 const S3Content = ({ bucketPath, className }) => {
     const [content, setContent] = useState('');
@@ -63,8 +63,11 @@ const S3Content = ({ bucketPath, className }) => {
             try {
                 setLoading(true);
                 // Get the file from S3
-                const data = await Storage.get(bucketPath, { download: true });
-                const text = await data.Body.text();
+                const url = await getUrl({key: bucketPath});
+                const response = await fetch(url.url);
+                const text = await response.text();
+                // const data = await Storage.get(bucketPath, { download: true });
+                // const text = await data.Body.text();
                 setContent(text);
             } catch (err) {
                 console.error('Error fetching from S3:', err);
